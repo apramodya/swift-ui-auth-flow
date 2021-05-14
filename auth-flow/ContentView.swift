@@ -1,16 +1,15 @@
-//
-//  ContentView.swift
-//  auth-flow
-//
-//  Created by Pramodya Abeysinghe on 2021-05-14.
-//
-
 import SwiftUI
 
 struct ContentView: View {
+    @State var isAuthenticated = AppManager.IsAuthenticated()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Group {
+            isAuthenticated ? AnyView(HomeView()) : AnyView(LoginView())
+        }
+        .onReceive(AppManager.Authenticated, perform: {
+            isAuthenticated = $0
+        })
     }
 }
 
