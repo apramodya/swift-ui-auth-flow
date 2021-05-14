@@ -6,15 +6,19 @@ This is a demo to show how you can do a login flow in SwiftUI. Includes how to t
 ### Used frameworks
 
 -- SwiftUI
+
 -- Combine
 
 ### Features
 
 - Login
+
 -- On Success -> go to Home View
+
 -- On Fail -> give an Alert
 
 - Logout
+
 -- Go back to Login View
 
 ### Functionality
